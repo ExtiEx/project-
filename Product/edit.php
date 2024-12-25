@@ -14,6 +14,39 @@ $product = $pdo->query("SELECT * FROM products WHERE article = $article")->fetch
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    form {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 5px;
+        background-color: #008CBA;
+        color: #fff;
+        border: none;
+    }
+</style>
 <body>
 <form action="/Product/actions/update.php" method="post">
     <input name="article" type="hidden" value="<?= $article ?>">

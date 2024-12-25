@@ -12,6 +12,34 @@ $pdo = require_once $_SERVER['DOCUMENT_ROOT'] . '/db.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<STYLE>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 400px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #008CBA;
+        color: #fff;
+        cursor: pointer;
+    }
+</STYLE>
 <body>
     <form action="/Product/actions/store.php" method="post">
         <input name="name" type="text" placeholder="Название">

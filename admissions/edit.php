@@ -15,6 +15,32 @@ $products = $pdo->query("SELECT * FROM products")->fetchAll(PDO::FETCH_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    input[type="date"],
+    input[type="number"],
+    select {
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
 <body>
 <form action="/admissions/actions/update.php" method="post">
     <input name="id" type="hidden" value="<?= $id?>">
